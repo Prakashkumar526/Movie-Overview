@@ -30,7 +30,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    /* Add the blur effect */
     filter: blur(5px);
     -webkit-filter: blur(5px);
     width: 1200px;
@@ -68,18 +67,11 @@ form {
     color: #fff;
     user-select: none;
     outline: none;
-    height: 50px;
+    height: 45px;
     margin: 10px;
 }
 
-fas fa {
-    color: white;
-    /* font-size: 18px;
-  font-weight: bold; */
-    margin-right: 5px;
-}
-
-i fas fa-play {
+.fa-search {
     color: white;
     margin-right: 5px;
 }
@@ -89,9 +81,9 @@ i fas fa-play {
     outline: none;
     border: none;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 13px;
     color: #fff;
-    height: 20px;
+    height: 17px;
     margin: 5px;
     width: 339px;
     justify-content: center;
@@ -122,7 +114,6 @@ main {
     position: relative;
     overflow: hidden;
 }
-
 
 .movie img {
     width: 100%;
@@ -184,7 +175,7 @@ main {
 }
 
 .movie:hover .overview {
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 #tags {
@@ -290,62 +281,44 @@ h1 .searchItem {
     cursor: pointer;
 }
 
-/* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 100%;
     width: 0;
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     background-color: rgb(0, 0, 0);
-    /* Black fallback color */
     background-color: rgba(0, 0, 0, 0.9);
-    /* Black w/opacity */
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     transition: 0.5s;
     user-select: none;
-    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-/* Position the content inside the overlay */
 .overlay-content {
     position: relative;
     top: 10%;
-    /* 25% from the top */
     width: 100%;
-    /* 100% width */
     text-align: center;
-    /* Centered text/links */
     margin-top: 30px;
     user-select: none;
-    /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
-/* The navigation links inside the overlay */
 .overlay a {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
     color: #818181;
     display: block;
-    /* Display block instead of inline */
     transition: 0.3s;
     user-select: none;
-    /* Transition effects on hover (color) */
 }
 
-/* When you mouse over the navigation links, change their color */
 .overlay a:hover,
 .overlay a:focus {
     color: #f1f1f1;
 }
 
-/* Position the close button (top right corner) */
 .overlay .closebtn {
     position: absolute;
     top: 20px;
@@ -353,10 +326,9 @@ h1 .searchItem {
     font-size: 60px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 550px) {
     .overlay a {
-        font-size: 20px
+        font-size: 20px;
     }
 
     .overlay .closebtn {
@@ -365,7 +337,6 @@ h1 .searchItem {
         right: 35px;
     }
 }
-
 
 .embed.hide {
     display: none;
@@ -385,7 +356,6 @@ h1 .searchItem {
     left: 5%;
     transform: translateY(-50%);
 }
-
 
 .arrow.right-arrow {
     top: 50%;
@@ -411,10 +381,172 @@ h1 .searchItem {
 .dots .dot.active {
     border-color: orange;
 }
+
 footer {
     background-color: #000;
     color: #fff;
     padding: 2px;
     text-align: center;
     height: 45px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    .logo {
+        width: 160px;
+        height: 40px;
+        margin: 5px;
+    }
+
+    form {
+        width: 280px;
+        height: 40px;
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    .fa-search {
+        font-size: 14px;
+    }
+
+    .search {
+        height: 16px;
+        width: 215px;
+    }
+
+    main {
+        margin-bottom: 100px;
+    }
+
+    .movie {
+        width: 250px;
+        margin: 0.5rem;
+    }
+
+    .movie-info {
+        padding: 0.5rem 0.5rem 0.5rem;
+    }
+
+    .movie-info h3 {
+        font-size: 16px;
+    }
+
+    .overview h3 {
+        font-size: 18px;
+    }
+
+    .tag {
+        padding: 8px 15px;
+        margin: 3px;
+        font-size: 12px;
+    }
+
+    .pagination {
+        margin: 10px 15px;
+    }
+
+    .page {
+        padding: 10px;
+    }
+
+    .current {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .know-more {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .overlay .closebtn {
+        top: 10px;
+        right: 35px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 50px;
+    }
+
+    .logo {
+        width: 140px;
+        height: 35px;
+        margin: 4px;
+    }
+
+    form {
+        width: 250px;
+        height: 35px;
+        font-size: 11px;
+        margin: 4px;
+    }
+
+    .fa-search {
+        font-size: 12px;
+    }
+
+    .search {
+        height: 11px;
+        width: 145px;
+    }
+
+    main {
+        margin-bottom: 120px;
+    }
+
+    .movie {
+        width: 200px;
+        margin: 0.4rem;
+    }
+
+    .movie-info {
+        padding: 0.4rem 0.4rem 0.4rem;
+    }
+
+    .movie-info h3 {
+        font-size: 14px;
+    }
+
+    .overview h3 {
+        font-size: 16px;
+    }
+
+    .tag {
+        padding: 6px 12px;
+        margin: 2px;
+        font-size: 10px;
+    }
+
+    .pagination {
+        margin: 10px 10px;
+    }
+
+    .page {
+        padding: 8px;
+    }
+
+    .current {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .know-more {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .overlay .closebtn {
+        top: 8px;
+        right: 25px;
+        font-size: 30px;
+    }
 }
