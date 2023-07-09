@@ -164,6 +164,7 @@ main {
     cursor: pointer;
     user-select: none;
     overflow: hidden;
+    font-size: 15px;
 }
 
 .overview h3 {
@@ -440,6 +441,10 @@ footer {
     .overview h3 {
         font-size: 18px;
     }
+    .overview {
+        overflow: scroll;
+        font-size: 14px;
+    }
 
     .tag {
         padding: 8px 15px;
@@ -518,6 +523,10 @@ footer {
 
     .overview h3 {
         font-size: 16px;
+    }
+    .overview{
+        font-size: 13px;
+        overflow: scroll;
     }
 
     .tag {
