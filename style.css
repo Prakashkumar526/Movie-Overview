@@ -475,6 +475,9 @@ footer {
         right: 35px;
         font-size: 40px;
     }
+    .footer {
+        font-size: small;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -557,5 +560,8 @@ footer {
         top: 8px;
         right: 25px;
         font-size: 30px;
+    }
+    .footer {
+        font-size: small;
     }
 }
